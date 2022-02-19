@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_off"
+    tools:context=".LampActivity">
+
+    <ImageView
+        android:id="@+id/genericImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="326dp"
+        android:paddingBottom="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lamp_image_off"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/editableTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Welcome to the Digital Lamp"
+        android:textColor="@color/secondary_color"
+        android:textSize="37sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/genericImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btnTurnOn"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/gradient_button"
+        android:text="Turn On"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTurnOff"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genericImageView" />
+
+    <android.widget.Button
+        android:id="@+id/btnTurnOff"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/gradient_button"
+        android:text="Turn Off"
+        android:textColor="@color/white"
+        app:backgroundTint="#FF5722"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTurnOn"
+        app:layout_constraintTop_toBottomOf="@+id/genericImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
